@@ -1,0 +1,42 @@
+<div id="cocktaildetails" class="container-fluid">
+  <div class="container">
+    <div class="row mt-10">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+          <app-loader [isLoading]="isLoading"></app-loader>
+          <div class="card" style="width: 100%;">
+              <img class="card-img-top" *ngIf="cockTail.strInstructions!=null" src="{{cockTail.strDrinkThumb}}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{cockTail.strDrink}}</h5>
+                <p class="cocktail-instruction">{{cockTail.strIngredient1}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient2}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient3}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient4}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient5}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient6}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient7}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient8}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient9}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient10}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient11}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient12}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient13}}</p>
+                <p class="cocktail-instruction">{{cockTail.strIngredient14}}</p>
+                <p>{{cockTail.strIngredient15}}</p>
+                <p *ngIf="cockTail.strInstructions!=null"><strong>How to Prepare</strong></p>
+                <p class="card-text">{{cockTail.strInstructions}}</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-info"  [routerLink]="['/']">Back</button>
+      </div>
+    </div>
+    <div class="row mt-10">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"></div>
+      <div class="col-md-3"></div>
+    </div>
+
+  </div>
+</div>

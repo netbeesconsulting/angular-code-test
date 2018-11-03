@@ -1,0 +1,38 @@
+<div class="container-fluid" #scrollMe style="overflow: scroll;height: 770px;" (scroll)="onScroll()">
+  <div class="row col-md-12" style="margin-top: 15px;">
+    <form>
+      <div class="form-group" >
+        <input type="text" class="form-control" placeholder="Search" name="query" [(ngModel)]="query" id="listSearch">
+      </div>
+    </form>
+  </div>
+  <div class="row" >
+      <app-loader [isLoading]="isLoading"></app-loader>
+       <div id="cardCollection" class="col-md-3 card-pading" *ngFor="let item of cocktails | slice:startAt:endAt | search: query; let i = index">
+        <a (click)="callToDetailsViewTab(item.idDrink)"  [routerLink]="['/cocktaildetail/item.idDrink']">
+          <div class="card">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card-block card-block-p">
+                  <h5 class="card-title">{{item.strDrink}}</h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card-img-bottom">
+                  <img class="card-img-top icon-image" src="{{item.strDrinkThumb}}" alt="iconone">
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-12">
+              <!--// loader-->
+              <div class="loader" *ngIf="loaderActivate">
+                  <i class="fas fa-circle-notch fa-spin loader-icon"></i>
+                </div>
+                <!--End loader-->
+      </div>
+  </div>
+</div>

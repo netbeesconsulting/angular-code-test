@@ -1,0 +1,88 @@
+/*
+ * Entry point of global application style.
+ * Component-specific style should not go here and be included directly as part of the components.
+ */
+
+// Theme variables, must be included before the libraries to allow overriding defaults
+@import "theme/theme-variables";
+
+// 3rd party libraries
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
+
+// Theme customization
+@import "theme/theme";
+
+#cardCollection{
+  a{
+    color: #212529;
+  }
+  a:hover {
+    color: #212529;
+    text-decoration: none !important;
+}
+}
+
+.card-img-bottom {
+  color: #fff;
+  background-size: cover;
+  padding: 5px;
+}
+.card-pading{
+  padding: 10px;
+}
+
+.card-block-p {
+  padding: 5px;
+}
+
+.loader {
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  text-align: center;
+  height: 100%;
+
+}
+
+.loader-icon {
+  font-size: 30px;
+  color: #212529;
+  position: relative;
+  top: 30px;
+}
+.cocktail-instruction{
+  margin-top: 0;
+  margin-bottom: 0rem !important;
+}
+.initial-loader{
+  margin: 0 auto;
+  top: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  text-align: center;
+  height: 100%;
+
+}
+
+.initial-loader-icon {
+  font-size: 30px;
+  top: 37%;
+  position: relative;
+}
+
+.mt-10{
+  margin-top: 20px;
+}
+#cocktaildetails{
+  .card{
+    border: none;
+  }
+}
